@@ -149,6 +149,7 @@ define([
         queue.enqueue('b');
         expect(queue.dequeue()).to.equal('a');
       });
+      
 
       it('removes the oldest item, after newer items have already been added and removed', function() {
         queue.enqueue('a');
