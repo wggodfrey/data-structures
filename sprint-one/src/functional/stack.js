@@ -7,19 +7,6 @@ var Stack = function() {
 
   // Implement the methods below
   someInstance.push = function(value) {
-<<<<<<< HEAD
-    storage[someInstance.size()] = value;
-  };
-
-  someInstance.pop = function() {
-    let lastIn = storage[someInstance.size() - 1];
-    delete storage[someInstance.size() - 1];
-    return lastIn;
-  };
-
-  someInstance.size = function() {
-    return Object.keys(storage).length;
-=======
     for (var i = size - 1; i >= 0; i--) {
       storage[i+1] = storage[i];
     }
@@ -40,7 +27,6 @@ var Stack = function() {
 
   someInstance.size = function() {
     return size;
->>>>>>> origin/pair
   };
 
   return someInstance;
