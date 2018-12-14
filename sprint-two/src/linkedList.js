@@ -31,13 +31,13 @@ var LinkedList = function() {
   list.contains = function(target) {
     var currentNode = list.head;
     var isFound = false;
-    while(currentNode !== null) {
+    while (currentNode !== null) {
       if (typeof target !== 'object') {
         if (currentNode.value === target) {
           isFound = true;
         }
       } else {
-        return compareObjects(target,currentNode.value);
+        return compareObjects(target, currentNode.value);
       }
       currentNode = currentNode.next;
     }
