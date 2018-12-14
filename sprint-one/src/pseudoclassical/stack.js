@@ -1,29 +1,22 @@
 var Stack = function() {
-  // Hey! Rewrite in the new style. Your code will wind up looking very similar,
-  // but try not not reference your old code in writing the new style.
-  this.count = 0;
   this.storage = {};
+  this.length = 0;
 };
 
 Stack.prototype.push = function(value) {
-  for (var i = this.count - 1; i >= 0; i--) {
-    this.storage[i + 1] = this.storage[i];
-  }
-  this.storage[0] = value;
-  this.count++;
+  this.storage[this.length] = value;
+  this.length++;
 };
 
 Stack.prototype.pop = function() {
-  if (this.count > 0) {
-    var result = this.storage[0];
-    for (var i = 0; i < this.count; i++) {
-      this.storage[i] = this.storage[i + 1];
-    }
-    this.count--;
+  if (this.size() > 0) {
+    var result = this.storage[this.length - 1];
+    delete this.storage[this.length - 1];
+    this.length--;
     return result;
   }
 };
 
 Stack.prototype.size = function() {
-  return this.count;
+  return this.length;
 };
