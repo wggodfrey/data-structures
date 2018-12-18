@@ -101,12 +101,3 @@ HashTable.prototype.rehash = function() {
 //   });
 // };
 
-
-
-/*
- * Complexity: What is the time complexity of the above functions?
-  .insert() has constant complexity
-  .retrieve() has constant complexity
-  .remove() has linear complexity
- */
-
